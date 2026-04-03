@@ -1,17 +1,14 @@
 # 🩸 Cadastro de Doadores de Sangue
 
 ## 📌 Descrição
-Sistema simples em Python para cadastro e validação de doadores de sangue.
+Sistema em Python para cadastro e validação de doadores.
 
 ## 🚀 Funcionalidades
-- Cadastro de doador
-- Cálculo automático de idade
-- Validação para doação
-
-## 🧠 Regras
-- Peso mínimo: 50kg
-- Idade: entre 16 e 69 anos
+- Cadastro de usuários
+- Validação de dados
+- Cálculo de idade
+- Verificação de elegibilidade
 
 ## ▶️ Como executar
 ```bash
-python main.py
+python src/main.py
