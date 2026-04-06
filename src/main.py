@@ -1,3 +1,6 @@
+#Bibliotecas
+from datetime import datetime
+
 #Cadastro da ficha do doador
 print('=' * 50)
 print("Bem-vindo ao Cadastro de doadores de sangue")
@@ -7,7 +10,7 @@ altura = int(input("Por favor informe sua altura em cm: "))
 ano_nascimento = int(input("Por favor informe seu ano de nascimento: "))
 
 #Regras
-idade = 2026 - ano_nascimento #Colocar ano atual.
+idade = datetime.now().year - ano_nascimento 
 tem_peso_minimo = peso >= 50
 tem_idade_minima = idade >= 16 and idade <= 69
 
