@@ -9,6 +9,19 @@ peso = float(input("Por favor informe o seu peso: "))
 altura = int(input("Por favor informe sua altura em cm: "))
 ano_nascimento = int(input("Por favor informe seu ano de nascimento: "))
 
+erro = False
+
+if peso <= 0:
+    print("Peso inválido")
+    erro = True
+
+if altura <= 0:
+    print("Altura inválida")
+    erro = True
+
+if erro:
+    exit()
+
 #Regras
 idade = datetime.now().year - ano_nascimento 
 tem_peso_minimo = peso >= 50
