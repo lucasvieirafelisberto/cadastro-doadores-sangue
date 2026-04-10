@@ -24,14 +24,12 @@ if erro:
 
 #Regras
 idade = datetime.now().year - ano_nascimento 
-tem_peso_minimo = peso >= 50
-tem_idade_minima = idade >= 16 and idade <= 69
+pode_doar = peso >= 50 and 16 <= idade <= 69
 
 #Saída dos valores informados:
 print(f"NOME: {nome}")
 print(f"PESO: {peso}kg")
 print(f"ALTURA: {altura}cm")
 print(f"IDADE: {idade} anos")
-print(f"TEM PESO MINIMO PARA DOAR? {tem_peso_minimo}")
-print(f"ESTÁ NA IDADE CORRETA PARA DOAR ENTRE 16 A 69 ANOS? {tem_idade_minima}")
+print(f"Pode doar sangue: {'Sim' if pode_doar else 'Não'}")
 print('=' * 50)
