@@ -1,6 +1,10 @@
 #Bibliotecas
 from datetime import datetime
 
+def calcular_idade(ano_nascimento):
+    from datetime import datetime
+    return datetime.now().year - ano_nascimento
+
 #Cadastro da ficha do doador
 print('=' * 50)
 print("Bem-vindo ao Cadastro de doadores de sangue")
@@ -23,7 +27,7 @@ if erro:
     exit()
 
 #Regras
-idade = datetime.now().year - ano_nascimento 
+idade = calcular_idade(ano_nascimento)
 pode_doar = peso >= 50 and 16 <= idade <= 69
 
 #Saída dos valores informados:
