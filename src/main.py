@@ -1,5 +1,6 @@
 #Bibliotecas
 from datetime import datetime
+import json
 
 def calcular_idade(ano_nascimento):
     from datetime import datetime
@@ -29,6 +30,18 @@ if erro:
 #Regras
 idade = calcular_idade(ano_nascimento)
 pode_doar = peso >= 50 and 16 <= idade <= 69
+
+doador = {
+    "nome": nome,
+    "idade": idade,
+    "peso": peso,
+    "altura": altura,
+    "pode_doar": pode_doar
+}
+
+with open("data/doadores.json", "a") as f:
+    json.dump(doador, f)
+    f.write("\n")
 
 #Saída dos valores informados:
 print(f"NOME: {nome}")
